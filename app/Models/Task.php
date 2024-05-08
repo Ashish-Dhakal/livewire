@@ -19,4 +19,9 @@ class Task extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function scopeSearch($query, $value){
+    $query->where('title' , 'like' , "%{$value}%")
+          ->orWhere('description' , 'like' , "%{$value}%");
+    }
 }
