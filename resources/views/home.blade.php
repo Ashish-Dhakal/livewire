@@ -8,7 +8,7 @@
 
 @section('content')
    
-    @livewire('task')
+    @livewire('user-task')
 @stop
 
 @section('css')
